@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     random() {
-      return Math.floor(Math.random() * (this.verbs.length - 1)) + 1;
+      return Math.floor(Math.random() * (this.verbs.length));
     },
     getVerb() {
       return this.verbs[this.random()];
@@ -41,13 +41,12 @@ export default {
       this.getNew();
     },
     doFalseEvent(event) {
-      // do something
       this.verbs.push(event);
       this.getNew();
     },
     getNew() {
       this.verb = this.getVerb();
-      console.log(this.verbs.length);
+      console.log(this.verb);
     },
   },
 };
