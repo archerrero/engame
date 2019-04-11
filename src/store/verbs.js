@@ -26,7 +26,7 @@ export default {
     },
     {
       v1: 'be',
-      v2: 'was, <br/>were',
+      v2: 'was, were',
       v3: 'been',
       translate: 'быть',
     },
@@ -415,7 +415,7 @@ export default {
       translate: 'вешать, <br/>развешивать',
     },
     {
-      v1: 'have, <br/>has',
+      v1: 'have, has',
       v2: 'had',
       v3: 'had',
       translate: 'иметь',

@@ -17,9 +17,9 @@
       <div
         class="card--back"
         v-if="isBackShown">
-        {{verb.v1}} <br>
-        {{verb.v2}} <br>
-        {{verb.v3}}
+        <p>{{verb.v1}}</p>
+        <p>{{verb.v2}}</p>
+        <p>{{verb.v3}}</p>
 
         <div
           class="card--arrows--i left"
@@ -46,6 +46,7 @@ export default {
         width: 0,
         height: 0,
       },
+      GAP: 20,
     };
   },
   created() {
@@ -66,8 +67,8 @@ export default {
     },
     getMinDocumentSize() {
       return (document.body.offsetHeight > document.body.offsetWidth)
-        ? `${document.body.offsetWidth}px`
-        : `${document.body.offsetHeight}px`;
+        ? `${document.body.offsetWidth - this.GAP}px`
+        : `${document.body.offsetHeight - this.GAP}px`;
     },
   },
 };
