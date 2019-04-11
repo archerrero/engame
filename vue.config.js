@@ -1,4 +1,5 @@
 module.exports = {
+  outputDir: 'dist/public_html',
   css: {
     loaderOptions: {
       // pass options to sass-loader
