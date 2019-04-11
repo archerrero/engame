@@ -76,7 +76,7 @@ export default {
       v1: 'bind',
       v2: 'bound',
       v3: 'bound',
-      translate: 'связать',
+      translate: 'связывать',
     },
     {
       v1: 'bite',
@@ -160,13 +160,13 @@ export default {
       v1: 'can',
       v2: 'could',
       v3: 'could',
-      translate: 'мочь, <br/>уметь',
+      translate: 'уметь, <br/> мочь',
     },
     {
       v1: 'cast',
       v2: 'cast',
       v3: 'cast',
-      translate: 'бросить, <br/>кинуть, <br/>вышвырнуть',
+      translate: 'бросать, <br/>кидать, <br/>вышвырнуть',
     },
     {
       v1: 'catch',
@@ -238,7 +238,7 @@ export default {
       v1: 'do',
       v2: 'did',
       v3: 'done',
-      translate: 'делать, <br/>выполнять',
+      translate: 'делать (что либо), <br/>выполнять',
     },
     {
       v1: 'draw',
@@ -472,7 +472,7 @@ export default {
       v1: 'interweave',
       v2: 'interwove',
       v3: 'interwoven',
-      translate: 'воткать',
+      translate: 'вплетать',
     },
     {
       v1: 'keep',
@@ -490,7 +490,7 @@ export default {
       v1: 'knit',
       v2: 'knitted / knit',
       v3: 'knitted / knit',
-      translate: 'вязать',
+      translate: 'вязать, <br/> скрепляться',
     },
     {
       v1: 'know',
@@ -502,7 +502,7 @@ export default {
       v1: 'lay',
       v2: 'laid',
       v3: 'laid',
-      translate: 'класть, <br/>положить',
+      translate: 'прокладывать, <br/>располагать',
     },
     {
       v1: 'lead',
@@ -526,7 +526,7 @@ export default {
       v1: 'learn',
       v2: 'learnt / learned',
       v3: 'learnt / learned',
-      translate: 'учить',
+      translate: 'учиться (чему либо)',
     },
     {
       v1: 'leave',
@@ -568,7 +568,7 @@ export default {
       v1: 'make',
       v2: 'made',
       v3: 'made',
-      translate: 'делать, <br/>производить, <br/>создавать',
+      translate: 'делать (своими руками), <br/>производить, <br/>создавать',
     },
     {
       v1: 'may',
@@ -742,13 +742,13 @@ export default {
       v1: 'overdo',
       v2: 'overdid',
       v3: 'overdone',
-      translate: 'пережари(ва)ть',
+      translate: 'переусердствовать, <br/>перебарщивать',
     },
     {
       v1: 'overdraw',
       v2: 'overdrew',
       v3: 'overdrawn',
-      translate: 'превышать',
+      translate: 'превышать, <br/>преувеличивать',
     },
     {
       v1: 'overeat',
@@ -796,7 +796,7 @@ export default {
       v1: 'overrun',
       v2: 'overran',
       v3: 'overrun',
-      translate: 'переливаться через край',
+      translate: 'переполнять, <br/>наводнять',
     },
     {
       v1: 'oversee',
@@ -820,13 +820,13 @@ export default {
       v1: 'overtake',
       v2: 'overtook',
       v3: 'overtaken',
-      translate: 'догонять',
+      translate: 'догонять, <br/>настигать',
     },
     {
       v1: 'overthrow',
       v2: 'overthrew',
       v3: 'overthrown',
-      translate: 'свергать',
+      translate: 'свергать, <br/>опрокидывать',
     },
     {
       v1: 'partake',
@@ -910,7 +910,7 @@ export default {
       v1: 'remake',
       v2: 'remade',
       v3: 'remade',
-      translate: 'переделывать',
+      translate: 'переделывать (руками)',
     },
     {
       v1: 'rend',

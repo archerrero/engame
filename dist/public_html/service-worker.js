@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.43bec40fe40cfa1ec4ba0551dbf4edab.js"
+  "/precache-manifest.53ff3c8e95e965c56ea65d0ddfb93f6e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "engame"});
