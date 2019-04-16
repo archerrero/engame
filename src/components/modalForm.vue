@@ -103,10 +103,10 @@ export default {
     sendOffer() {
       this.axios({
         method:'post',
-        url: 'https://api.github.com/repos/archerrero/engame/issues',
+        url: './mail.php',
         headers: {
           Accept: 'application/vnd.github.symmetra-preview+json',
-          Authorization: 'token b130f9434ad9ddc35b63d29194dc87ccb1194cc0',
+          Authorization: 'Basic',
         },
         data: {
           "title": `Replace offer for #${this.verb.id}`,
@@ -118,7 +118,9 @@ export default {
             `,
         }
       }).then((response) => {
+        console.log(response)
         if (response.status === 201) {
+          
           this.isSend = true;
           this.closeAfter(1500);
         }
