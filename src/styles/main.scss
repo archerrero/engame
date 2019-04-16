@@ -178,14 +178,13 @@ body {
 
     &--i{
       position: absolute;
-      top: 50%;
+      bottom: 0%;
       color: #000;
       font-size: 5rem;
-      margin-top: -3rem;
       z-index: 9999;
       color: #fff;
       overflow: hidden;
-      height: 6rem;
+      height: 5rem;
 
       &::after {
         content: "";
@@ -203,6 +202,7 @@ body {
         left: 0%;
         // TODO: not good
         padding: 1.1rem 1.4rem 1rem .6rem ;
+        border-radius: 0 0 0 2rem ;
 
         &::after {
           background: $green;
@@ -212,6 +212,7 @@ body {
 
       &.right {
         right: 0%;
+        border-radius: 0 0 2rem 0;
         // TODO: not good
         padding: 1.1rem .6rem  1rem 1.4rem;
 
