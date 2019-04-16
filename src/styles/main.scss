@@ -20,9 +20,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
+
+  &--offer {
+  }
 }
 
 .card {
+  margin: auto;
   height: 100%;
   width: 100%;
   font-size: 1.5rem;
@@ -33,6 +38,13 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 3rem;
+
+  @media (min-width: 768px) {
+    max-height: 50vw;
+    max-width: 50vw;
+    font-size: 2.5rem;
+  }
+  
 
   &--front,
   &--back {
@@ -84,9 +96,31 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 
-    p {
+    &--translate {
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: bold;
+      // margin-bottom: auto;
+      color: #999;
+    }
+
+    &--forms {
+      margin: auto 0;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &--offer {
+      font-size: .8rem;
+      color: #999;
+      position: absolute;
+      bottom: 0;
       margin: 0;
     }
+
+
 
 
     &-enter-active,
@@ -156,11 +190,11 @@ body {
       &::after {
         content: "";
         display: block;
-        width: 6rem;
+        width: 4rem;
         position: absolute;
-        height: 6rem;
+        height: 4rem;
         border-radius: 50%;
-        top: 0;
+        top: 1rem;
         z-index: -1;
 
       }
@@ -172,7 +206,7 @@ body {
 
         &::after {
           background: $green;
-          right: 0;
+          right: 0.5rem;
         }
       }
 
@@ -183,16 +217,139 @@ body {
 
         &::after {
           background: $red;
-          left: 0;
+          left: 0.5rem;
         }
       }
     }
   }
 }
 
-// .fade-enter-active, .fade-leave-active {
-//   transition: opacity .5s;
-// }
-// .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1$animation-scale */ {
-//   opacity: 0;
-// }
+.modal {
+  position: absolute;
+  bottom: 0%;
+  background: #fff;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+
+  $wrapper: #{&}--wrapper ;
+
+  &--wrapper  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: transparentize($color: #000000, $amount: .9)
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: .3s all;
+    // top: 0;
+    & #{ $wrapper} {
+      transition: 0s all;
+      top: 0;
+    }
+  }
+
+  &-enter,
+  &-leave-to {
+    bottom: -100%;
+  }
+  
+  &-enter-to,
+  &-leave  {
+    bottom: 0%;
+  }
+
+
+  &--label{
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    span {
+      width: 75px;
+      margin-right: 12px;
+      font-size: 12px;
+    }
+
+    .modal--input {
+      flex-grow: 1;
+    }
+  }
+
+  &--input {
+    height: 32px;
+    padding: 4px;
+  }
+
+  &--btn {
+    // selector-extend($selector: , $extendee: , $extender: )
+    @extend .button;
+  }
+}
+
+.greeter {
+  &--wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &--content {
+    // margin: auto 0;
+  }
+
+  &--header {
+    // margin: auto 0;
+  }
+
+  &--list {
+    // list-style: decimal
+    text-align: left;
+
+    &--i {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.button {
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  background: #26a69a;
+  color: #fff;
+
+  &.disabled {
+    background: #DFDFDF !important;
+    color: #9F9F9F !important;
+  }
+  &.done {
+    background: #0091ea;
+  }
+}
+
+.green {
+  color: darken($color: $green, $amount: 30%);
+}
+
+.red {
+  color: darken($color: $red, $amount: 30%);
+}

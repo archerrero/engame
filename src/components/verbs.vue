@@ -9,18 +9,31 @@
       <div
         class="card--front"
         v-if="!isBackShown"
-        @click="check()"
-        v-html="verb.translate">
+        @click="check()">
+        {{verb.translate}}
       </div>
     </transition>
+
     <transition name="card--back">
+
       <div
         class="card--back"
         v-if="isBackShown">
-        <p>{{verb.v1}}</p>
-        <p>{{verb.v2}}</p>
-        <p>{{verb.v3}}</p>
 
+        <span class="card--back--translate">
+          {{verb.translate}}          
+        </span>
+
+        <div  class="card--back--forms">
+          <p>{{verb.v1}}</p>
+          <p>{{verb.v2}}</p>
+          <p>{{verb.v3}}</p>
+        </div>
+
+        <p
+          class="card--back--offer"
+          @click="offerTranslation()"> Предложить перевод</p>
+        
         <div
           class="card--arrows--i left"
           @click="goTrue()">&lsaquo;</div>
@@ -34,6 +47,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'Verbs',
   props: {
@@ -56,19 +71,26 @@ export default {
   methods: {
     check() {
       this.isBackShown = !this.isBackShown;
+      this.$emit('opened')
     },
+
     goTrue() {
       this.$emit('true');
       this.isBackShown = !this.isBackShown;
     },
+
     goFalse() {
       this.$emit('false', this.verb);
       this.isBackShown = !this.isBackShown;
     },
+
     getMinDocumentSize() {
       return (document.body.offsetHeight > document.body.offsetWidth)
         ? `${document.body.offsetWidth - this.GAP}px`
         : `${document.body.offsetHeight - this.GAP}px`;
+    },
+    offerTranslation() {
+      this.$emit('offerTranslation')
     },
   },
 };
