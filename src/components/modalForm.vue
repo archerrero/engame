@@ -105,27 +105,19 @@ export default {
         method:'post',
         url: './mail.php',
         headers: {
-          Accept: 'application/vnd.github.symmetra-preview+json',
-          Authorization: 'Basic',
+          'Content-Type': 'application/x-www-form-urlencoded' 
         },
         data: {
-          "title": `Replace offer for #${this.verb.id}`,
-          "body": `Id is ${this.verb.id} \n
-            translate: "${this.verb.translate}" to "${this.offeredVerb.translate}" \n
-            v1: "${this.verb.v1}" to "${this.offeredVerb.v1}" \n
-            v2: "${this.verb.v1}" to "${this.offeredVerb.v2}" \n
-            v3: "${this.verb.v3}" to "${this.offeredVerb.v3}" \n
-            `,
+          msg: {
+            "title": `Replace offer for #${this.verb.id}`,
+            "body": `Id is ${this.verb.id} \n
+              translate: "${this.verb.translate}" to "${this.offeredVerb.translate}" \n
+              v1: "${this.verb.v1}" to "${this.offeredVerb.v1}" \n
+              v2: "${this.verb.v1}" to "${this.offeredVerb.v2}" \n
+              v3: "${this.verb.v3}" to "${this.offeredVerb.v3}" \n
+              `,
+          }
         },
-        body: {
-          "title": `Replace offer for #${this.verb.id}`,
-          "body": `Id is ${this.verb.id} \n
-            translate: "${this.verb.translate}" to "${this.offeredVerb.translate}" \n
-            v1: "${this.verb.v1}" to "${this.offeredVerb.v1}" \n
-            v2: "${this.verb.v1}" to "${this.offeredVerb.v2}" \n
-            v3: "${this.verb.v3}" to "${this.offeredVerb.v3}" \n
-            `,
-        }
       }).then((response) => {
         console.log(response)
         if (response.status === 200) {
